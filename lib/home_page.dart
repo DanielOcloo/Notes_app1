@@ -107,59 +107,52 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               const SizedBox(height: 30),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Expanded(
-                    child: Column(
-                      children: const [
-                        Short(
-                          title: 'Image test',
-                          body: 'Adding image to a memo',
-                          bottomtext: 'Last Edited: 7/12/2021',
-                        ),
-                        SizedBox(height: 15),
-                        ShortIcon(
-                          title: 'Long piece of text',
-                          bottomtext: 'Last Edited: 5/8/2021',
-                        ),
-                        SizedBox(height: 15),
-                        ShortIcon(
-                          title: 'Only me',
-                          bottomtext: 'Last Edited: 5/8/2021',
-                        ),
-                        SizedBox(height: 15),
-                        Medium(
-                          title: 'Only me',
-                          body:
-                              'Hello there context: context,\nbuilder: (context) {\nreturn Recording (\n7\n98\nnote: note,',
-                          bottomtext: 'Last Edited: 5/8/2021',
-                        ),
-                      ],
-                    ),
+              GridView.count(
+                scrollDirection: Axis.vertical,
+                shrinkWrap: true,
+                primary: false,
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                crossAxisSpacing: 15,
+                mainAxisSpacing: 15,
+                crossAxisCount: 2,
+                children: const <Widget>[
+                  Short(
+                    title: 'Image test',
+                    body: 'Adding image to a memo',
+                    lastedited: 'Last Edited 7/12/2021',
                   ),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: Column(
-                      children: const [
-                        Long(
-                          title: 'OCR test',
-                          body:
-                              "GHANA NATIONAL\nASSOCIATION OF\nADVENTIST\nSTUDENTS - KNUST\nPRESENTS\nWEEK OF SPIRITUAL EMPHASIS\nTHEDNA\nGOD\nIT'S TODAY !!!\nWITH PR.ANTHONY ...",
-                          bottomtext: 'Last Edited: 5/8/2021',
-                        ),
-                        SizedBox(height: 15),
-                        Long(
-                          title: 'My name',
-                          body:
-                              "ofiajisjdajSDSDShalkmlkijh\nkDSDAFEFnjkhkjhkgkjhkj\nfuhofiaiSDLKAJSKsidsdusiadhsasjdlskkjk\nhdslkdsjlakSAKDJSLKASdjskd\ndaljshdkSDJLKAJSDjashdksjh\ndaskdjksljdalkjSLKDASJKLLKJdsalkjskd\ndksakjLDJALKSDSdlsalkdsjl\naksdaskldjSKJDLSKJlaskjdlsaj",
-                          bottomtext: 'Last Edited: 12/4/2022',
-                        ),
-                      ],
-                    ),
+                  Short(
+                    title: 'OCR tes',
+                    body: 'dajkhdjdjsklah\nslkjdskdasjdk\nsjdlskjdlkajs',
+                    lastedited: 'Last Edited 5/8/2021',
+                  ),
+                  ShortIcon(
+                    title: 'Long piece of text',
+                    lastedited: 'Last Edited 5/8/2021',
+                  ),
+                  Short(
+                    title: 'My name',
+                    body:
+                        'dajkhdjkhdjadhksh\nahdsjdkasjhds\ndlsjdlkasj\ndlasjdksjlds',
+                    lastedited: 'Last Edited 12/4/2022',
+                  ),
+                  ShortIcon(
+                    title: 'Only me',
+                    lastedited: 'Last Edited 5/8/2021',
+                  ),
+                  Short(
+                    title: 'My many names',
+                    body: 'dajkhdjkhdsdasds',
+                    lastedited: 'Last Edited 12/4/2022',
+                  ),
+                  Short(
+                    title: 'dshdkajs',
+                    body: 'dajkhdjkh',
+                    lastedited: 'dshjdkajhs',
                   ),
                 ],
               ),
+              const SizedBox(height: 30),
             ],
           ),
         ),
