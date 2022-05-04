@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
-import 'classes.dart';
-import 'note.dart';
+import 'package:notes_app/classes.dart';
+//import 'classes.dart';
+import 'note_page.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-  final String title;
+class HomePage extends StatefulWidget {
+  const HomePage({
+    Key? key,
+  }) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -107,50 +109,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               const SizedBox(height: 30),
-              GridView.count(
-                scrollDirection: Axis.vertical,
-                shrinkWrap: true,
-                primary: false,
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                crossAxisSpacing: 15,
-                mainAxisSpacing: 15,
-                crossAxisCount: 2,
-                children: const <Widget>[
-                  Short(
-                    title: 'Image test',
-                    body: 'Adding image to a memo',
-                    lastedited: 'Last Edited 7/12/2021',
-                  ),
-                  Short(
-                    title: 'OCR tes',
-                    body: 'dajkhdjdjsklah\nslkjdskdasjdk\nsjdlskjdlkajs',
-                    lastedited: 'Last Edited 5/8/2021',
-                  ),
-                  ShortIcon(
-                    title: 'Long piece of text',
-                    lastedited: 'Last Edited 5/8/2021',
-                  ),
-                  Short(
-                    title: 'My name',
-                    body:
-                        'dajkhdjkhdjadhksh\nahdsjdkasjhds\ndlsjdlkasj\ndlasjdksjlds',
-                    lastedited: 'Last Edited 12/4/2022',
-                  ),
-                  ShortIcon(
-                    title: 'Only me',
-                    lastedited: 'Last Edited 5/8/2021',
-                  ),
-                  Short(
-                    title: 'My many names',
-                    body: 'dajkhdjkhdsdasds',
-                    lastedited: 'Last Edited 12/4/2022',
-                  ),
-                  Short(
-                    title: 'dshdkajs',
-                    body: 'dajkhdjkh',
-                    lastedited: 'dshjdkajhs',
-                  ),
-                ],
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: NoteCardData(),
               ),
               const SizedBox(height: 30),
             ],
@@ -165,7 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: () => Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const MyNotePage(),
+            builder: (context) => const NotePage(),
           ),
         ),
       ),

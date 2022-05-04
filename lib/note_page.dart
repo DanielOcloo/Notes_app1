@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'classes.dart';
 
-class MyNotePage extends StatefulWidget {
-  const MyNotePage({
+class NotePage extends StatefulWidget {
+  const NotePage({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<MyNotePage> createState() => _MyNotePageState();
+  State<NotePage> createState() => _NotePageState();
 }
 
-class _MyNotePageState extends State<MyNotePage> {
+class _NotePageState extends State<NotePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
