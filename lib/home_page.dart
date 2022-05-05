@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app/classes.dart';
-//import 'classes.dart';
+import 'package:notes_app/notecarddata.dart';
 import 'note_page.dart';
 
 class HomePage extends StatefulWidget {

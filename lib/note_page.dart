@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'classes.dart';
+import 'typing.dart';
 
 class NotePage extends StatefulWidget {
   const NotePage({
