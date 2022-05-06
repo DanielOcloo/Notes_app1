@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app/notecarddata.dart';
 import 'note_page.dart';
+import 'notecard.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -110,7 +110,11 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(height: 30),
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20),
-                child: NoteCardData(),
+                child: NoteCard(
+                  title: 'My note',
+                  body: 'adldlskjda\ndjslkdjaksd',
+                  lastedited: '5/4/2021',
+                ),
               ),
               const SizedBox(height: 30),
             ],
