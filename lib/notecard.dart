@@ -14,15 +14,7 @@ class NoteCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(
-      itemCount: 10,
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        crossAxisSpacing: 15,
-        mainAxisSpacing: 15,
-      ),
-      itemBuilder: (BuildContext context, int index) {
-        return Container(
+    return Container(
           height: 100,
           width: 190,
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
@@ -80,10 +72,5 @@ class NoteCard extends StatelessWidget {
             ],
           ),
         );
-      },
-      scrollDirection: Axis.vertical,
-      shrinkWrap: true,
-      primary: false,
-    );
   }
 }
