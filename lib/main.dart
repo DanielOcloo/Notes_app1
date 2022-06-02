@@ -1,3 +1,4 @@
+
 import 'package:provider/provider.dart';
 
 import 'home_page.dart';
@@ -11,16 +12,13 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Home page',
-        theme: ThemeData(
-          primarySwatch: Colors.lightBlue,
-        ),
-        home: const HomePage(),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Home page',
+      theme: ThemeData(
+        primarySwatch: Colors.lightBlue,
       ),
+      home: const HomePage(),
     );
   }
 }
