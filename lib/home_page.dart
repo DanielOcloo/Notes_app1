@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app/providers/note_provider.dart';
-import 'package:provider/provider.dart';
 import 'note_page.dart';
-import 'notecard.dart';
+import 'classes/notecard.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -16,7 +14,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    final provider = context.watch<NoteProvider>();
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -114,16 +111,16 @@ class _HomePageState extends State<HomePage> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: GridView.builder(
-                  itemCount: provider.notelist.length,
+                  itemCount: 10,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     crossAxisSpacing: 15,
                     mainAxisSpacing: 15,
                   ),
                   itemBuilder: (BuildContext context, int index) {
-                    return NoteCard(
-                      title: provider.notelist[index].title,
-                      body: provider.notelist[index].body,
+                    return const NoteCard(
+                      title: "dksjdlakjskldjskjdlja",
+                      body: 'dlkasjdlksjdakj',
                     );
                   },
                   scrollDirection: Axis.vertical,

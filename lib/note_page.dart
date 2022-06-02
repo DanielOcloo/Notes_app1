@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app/models/note.dart';
-import 'package:notes_app/providers/note_provider.dart';
-import 'package:provider/provider.dart';
 
 class NotePage extends StatefulWidget {
   const NotePage({
@@ -13,12 +10,8 @@ class NotePage extends StatefulWidget {
 }
 
 class _NotePageState extends State<NotePage> {
-  TextEditingController _titlecontroller = TextEditingController();
-  TextEditingController _bodycontroller = TextEditingController();
-  Note _newnote = Note();
   @override
   Widget build(BuildContext context) {
-    final provider = context.read<NoteProvider>();
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -27,14 +20,10 @@ class _NotePageState extends State<NotePage> {
         actions: [
           IconButton(
             onPressed: () {
-              setState(() {
-                _newnote.title = _titlecontroller.text;
-                _newnote.body = _bodycontroller.text;
-              });
-              provider.addnote(_newnote);
+              setState(() {});
+
               Navigator.pop(context);
             },
-            
             icon: const Icon(Icons.save),
           )
         ],
@@ -44,20 +33,18 @@ class _NotePageState extends State<NotePage> {
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              const SizedBox(height: 20),
+            children: const <Widget>[
+              SizedBox(height: 20),
               TextField(
-                controller: _titlecontroller,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   hintText: 'Title',
                   border: InputBorder.none,
                 ),
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20),
               TextField(
-                controller: _bodycontroller,
                 keyboardType: TextInputType.multiline,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   hintText: 'Type here',
                   border: InputBorder.none,
                 ),
